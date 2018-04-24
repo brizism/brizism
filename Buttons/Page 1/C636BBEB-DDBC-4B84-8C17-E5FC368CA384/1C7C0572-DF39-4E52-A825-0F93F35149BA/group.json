@@ -1,0 +1,53 @@
+{
+  "_class": "group",
+  "do_objectID": "1C7C0572-DF39-4E52-A825-0F93F35149BA",
+  "exportOptions": {
+    "_class": "exportOptions",
+    "exportFormats": [
+    ],
+    "includedLayerIds": [
+    ],
+    "layerOptions": 0,
+    "shouldTrim": false
+  },
+  "frame": {
+    "_class": "rect",
+    "constrainProportions": false,
+    "height": 75,
+    "width": 202,
+    "x": 464,
+    "y": 158
+  },
+  "hasClickThrough": false,
+  "isFlippedHorizontal": false,
+  "isFlippedVertical": false,
+  "isLocked": false,
+  "isVisible": true,
+  "layerListExpandedType": 0,
+  "layers": [
+    {
+      "class": "text",
+      "id": "209194D4-2DB3-4DF7-A625-530493D1F92E"
+    },
+    {
+      "class": "shapeGroup",
+      "id": "F384F334-6CC7-4388-A0EF-74977770CB14"
+    },
+    {
+      "class": "text",
+      "id": "6AD7411D-3943-4E87-B065-B59B6876547A"
+    }
+  ],
+  "name": "Button Dashed",
+  "nameIsFixed": true,
+  "resizingConstraint": 63,
+  "resizingType": 0,
+  "rotation": 0,
+  "shouldBreakMaskChain": false,
+  "style": {
+    "_class": "style",
+    "endDecorationType": 0,
+    "miterLimit": 10,
+    "startDecorationType": 0
+  }
+}
