@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -25,7 +25,7 @@ const buttonSizes = {
   wide: {
     'font-size': '1.6rem',
     'line-height': '4rem',
-    padding: '0 3.6rem',
+    padding: '0 4.2rem',
   },
   extraWide: {
     'font-size': '1.6rem',
@@ -39,19 +39,39 @@ const buttonSizes = {
   },
 };
 
+const buttonTypes = {
+  primary: {
+    'background': colors['blue'],
+    'insideBorder': colors['lightBlue']
+  },
+  success: {
+    'background': colors['green'],
+    'insideBorder': colors['darkGreen']
+  },
+  danger: {
+    'background': colors['red'],
+    'insideBorder': colors['orange']
+  },
+  warning: {
+    'background': colors['yellow'],
+    'insideBorder': colors['darkYellow']
+  }
+}
+
 function setDisplay({ size }) {
   return size === 'fullWidth' ? 'block' : 'inline-block';
 }
+
 function setWidth({ size }) {
   return size === 'fullWidth' ? '100%' : 'initial';
 }
 
 const Button = styled.button`
-  background: ${({ bgColor })  => colors[bgColor]};
+  background: ${({ buttonStyle }) => buttonTypes[buttonStyle]['background']};
   border: none;
   border-radius: .5rem;
   border: .2rem solid ${({ borderColor })  => colors[borderColor]};
-  box-shadow: inset 0 0 0 .3rem ${({ insetShadowColor })  => colors[insetShadowColor]},0 .3rem 0 0 #e7e6e4;
+  box-shadow: inset 0 0 0 .3rem ${({ buttonStyle }) => buttonTypes[buttonStyle]['insideBorder']},0 .3rem 0 0 #e7e6e4;
   color: ${({ fontColor })  => colors[fontColor]};
   cursor: pointer;
   display: ${setDisplay};
@@ -66,10 +86,16 @@ const Button = styled.button`
   &:hover {
     box-shadow: inset 0 0 0 .3rem ${({ insetShadowColor })  => colors[insetShadowColor]},0 .4rem 0 0 #e7e6e4;
     transform: translateY(-.2rem);
+  };
+  &:active {
+    box-shadow: inset 0 0 0 .4rem ${({ insetShadowColor })  => colors[insetShadowColor]};
+    transform: translateY(.3rem);
   }
 `;
+
 Button.defaultProps = {
-  bgColor: 'blue',
+  buttonStyle: 'primary',
+  buttonColor: 'pink',
   fontColor: 'white',
   size: 'medium',
   borderColor: 'slate'
