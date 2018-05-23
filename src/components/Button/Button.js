@@ -1,15 +1,29 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
+import { COLORS, GRADIENTS, BUTTON_SIZE } from '../../options';
 
 class Button extends Component {
+  static propTypes = {
+    children: PropTypes.node,
+    color: PropTypes.oneOf([ ...COLORS ]),
+    gradient: PropTypes.oneOf([ ...GRADIENTS ]),
+    size: PropTypes.oneOf([ ...BUTTON_SIZE ])
+  }
+
   render() {
     const {
-      children
+      children,
+      color,
+      gradient,
+      size
     } = this.props;
 
     const className = classNames(
-      'briz'
+      'br_button',
+      color,
+      gradient,
+      size
     )
     return (
       <button className={className}>
@@ -17,6 +31,10 @@ class Button extends Component {
       </button>
     );
   }
+}
+
+Button.defaultProps = {
+  color: 'blue'
 }
 
 export default Button;
