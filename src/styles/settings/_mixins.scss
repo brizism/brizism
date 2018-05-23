@@ -1,0 +1,6 @@
+@mixin handleButton($gradient) {
+  &::after {
+    background: $gradient;
+    color: $black;
+  }
+}
