@@ -3,7 +3,7 @@
 
 .br_button {
   background-color: transparent;
-  border: .3rem solid $black;
+  border: .4rem solid $black;
   padding: .78571429em 1.5em .78571429em;
   color: $black;
   margin: .4rem .2rem;
@@ -58,6 +58,7 @@
     font-size: $button-font-size;
     line-height: $button-line-height;
     padding: $button-padding;
+    border: .3rem solid $black;
   }
 
   &.medium {
