@@ -4,3 +4,7 @@
     color: $black;
   }
 }
+
+@mixin handleHeadline($gradient) {
+  background: $gradient;
+}
