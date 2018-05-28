@@ -1,17 +1,27 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import { HEADLINE_SIZE, GRADIENTS, COLORS } from '../../options';
+import { COLORS, GRADIENTS, HEADLINE_SIZE } from '../../options';
 
 class Headline extends Component {
+  static propTypes = {
+    children: PropTypes.node,
+    color: PropTypes.oneOf([ ...COLORS ]),
+    gradient: PropTypes.oneOf([ ...GRADIENTS ]),
+    size: PropTypes.oneOf([ ...HEADLINE_SIZE ])
+  }
+
   render() {
     const {
       children,
+      color,
+      gradient,
       size
     } = this.props;
     
     const className = classNames(
-      'br_headline'
+      'br_headline',
+      gradient ? `gradient__${gradient}` : `color__${color}`,
     )
 
     const HeadlineSize = size.toLowerCase();
@@ -22,6 +32,10 @@ class Headline extends Component {
       </HeadlineSize>
     );
   }
+}
+
+Headline.defaultProps = {
+  color: 'blue'
 }
 
 export default Headline;
