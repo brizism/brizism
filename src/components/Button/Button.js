@@ -8,7 +8,8 @@ class Button extends Component {
     children: PropTypes.node,
     color: PropTypes.oneOf([ ...COLORS ]),
     gradient: PropTypes.oneOf([ ...GRADIENTS ]),
-    size: PropTypes.oneOf([ ...BUTTON_SIZE ])
+    size: PropTypes.oneOf([ ...BUTTON_SIZE ]),
+    round: PropTypes.bool
   }
 
   render() {
@@ -16,13 +17,15 @@ class Button extends Component {
       children,
       color,
       gradient,
-      size
+      size,
+      round
     } = this.props;
 
     const className = classNames(
       'br__button',
       gradient ? `gradient__${gradient}` : `color__${color}`,
-      size
+      size,
+      round ? 'round' : ''
     )
     return (
       <button className={className}>
