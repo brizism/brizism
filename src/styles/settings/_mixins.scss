@@ -1,10 +1,12 @@
-@mixin handleButton($gradient) {
-  &::after {
-    background: $gradient;
-    color: $black;
+@mixin handleHeadline($colorOrGradient) {
+  &:after {
+    background: $colorOrGradient;
   }
 }
 
-@mixin handleHeadline($gradient) {
-  background: $gradient;
+@mixin handleButton($colorOrGradient){
+  &::after {
+        background: $colorOrGradient;
+        color: $black;
+      }
 }
