@@ -20,7 +20,7 @@ class Button extends Component {
     } = this.props;
 
     const className = classNames(
-      'br_button',
+      'br__button',
       gradient ? `gradient__${gradient}` : `color__${color}`,
       size
     )

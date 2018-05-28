@@ -20,7 +20,7 @@ class Headline extends Component {
     } = this.props;
     
     const className = classNames(
-      'br_headline',
+      'br__headline',
       gradient ? `gradient__${gradient}` : `color__${color}`,
     )
 
