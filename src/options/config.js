@@ -1,5 +1,18 @@
 export const COLORS = [
-
+  'green', 
+  'red', 
+  'orange', 
+  'yellow', 
+  'blue', 
+  'purple', 
+  'pink', 
+  'smoke',  
+  'darkSmoke',  
+  'snow',  
+  'darkSnow', 
+  'steel',  
+  'slate',  
+  'silver'   
 ]
 
 export const GRADIENTS = [
