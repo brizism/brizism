@@ -1,13 +1,15 @@
 @import '../settings/variables';
 @import '../settings/mixins';
-@import url('https://fonts.googleapis.com/css?family=Anton');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700,900');
 
 .br {
   &__headline {
     display: inline-block;
     position: relative;
     color: $black;
-    font-family: 'Anton', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    letter-spacing: -2px;
   
     &:after {
       @include handleHeadline($kale-salad);
