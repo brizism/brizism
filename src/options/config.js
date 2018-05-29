@@ -33,6 +33,15 @@ export const GRADIENTS = [
   'dusty-cactus'
 ]
 
+export const SOCIAL_MEDIA = [
+  'facebook',
+  'twitter',
+  'linkedin',
+  'instagram',
+  'github',
+  'google+'
+]
+
 export const BUTTON_SIZE = [
   'small',
   'medium',

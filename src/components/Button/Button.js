@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import { COLORS, GRADIENTS, BUTTON_SIZE } from '../../options';
+import { COLORS, GRADIENTS, BUTTON_SIZE, SOCIAL_MEDIA } from '../../options';
 
 class Button extends Component {
   static propTypes = {
@@ -9,6 +9,7 @@ class Button extends Component {
     color: PropTypes.oneOf([ ...COLORS ]),
     gradient: PropTypes.oneOf([ ...GRADIENTS ]),
     size: PropTypes.oneOf([ ...BUTTON_SIZE ]),
+    social: PropTypes.oneOf([ ...SOCIAL_MEDIA ]),
     round: PropTypes.bool
   }
 
@@ -18,6 +19,7 @@ class Button extends Component {
       color,
       gradient,
       size,
+      social,
       round
     } = this.props;
 
@@ -25,6 +27,7 @@ class Button extends Component {
       'br__button',
       gradient ? `gradient__${gradient}` : `color__${color}`,
       size,
+      social ? `social__${social}` : '',
       round ? 'round' : ''
     )
     return (
