@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
-import classNames from 'classnames';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
+import CSSClassnames, { namespace } from '../../options/CSSClassnames';
 import { COLORS, GRADIENTS, BUTTON_SIZE, SOCIAL_MEDIA } from '../../options';
+
+const CLASS_ROOT = CSSClassnames.BUTTON;
 
 class Button extends Component {
   static propTypes = {
@@ -24,8 +27,8 @@ class Button extends Component {
     } = this.props;
 
     const className = classNames(
-      'br__button',
-      gradient ? `gradient__${gradient}` : `color__${color}`,
+      CLASS_ROOT,
+      gradient ? gradient : color,
       size,
       social ? `social__${social}` : '',
       round ? 'round' : ''

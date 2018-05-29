@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
-import classNames from 'classnames';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
+import CSSClassnames, { namespace } from '../../options/CSSClassnames';
 import { COLORS, GRADIENTS, HEADLINE_SIZE } from '../../options';
+
+const CLASS_ROOT = CSSClassnames.HEADLINE;
 
 class Headline extends Component {
   static propTypes = {
@@ -20,8 +23,8 @@ class Headline extends Component {
     } = this.props;
     
     const className = classNames(
-      'br__headline',
-      gradient ? `gradient__${gradient}` : `color__${color}`,
+      CLASS_ROOT,
+      gradient ? gradient : color,
     )
 
     const HeadlineSize = size.toLowerCase();
