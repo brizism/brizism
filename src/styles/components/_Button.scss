@@ -1,8 +1,7 @@
 @import '../settings/variables';
 @import '../settings/mixins';
 
-.br {
-  &__button {
+.#{$brizism-namespace}button {
     background-color: transparent;
     border: .4rem solid $black;
     padding: .78571429em 1.5em .78571429em;
@@ -37,45 +36,42 @@
       height: 100%;
     }
 
-    &.gradient {
-      // GRADIENTS
-      &__vital-ocean { @include handleButton($vital-ocean) };
-      &__kale-salad { @include handleButton($kale-salad) };
-      &__disco-club { @include handleButton($disco-club) };
-      &__shady-lane { @include handleButton($shady-lane) };
-      &__retro-wagon { @include handleButton($retro-wagon) };
-      &__fresco-crush { @include handleButton($fresco-crush) };
-      &__cucumber-water { @include handleButton($cucumber-water) };
-      &__sea-salt { @include handleButton($sea-salt) };
-      &__par-four { @include handleButton($par-four) };
-      &__ooey-gooey { @include handleButton($ooey-gooey) };
-      &__bloody-mimosa { @include handleButton($bloody-mimosa) };
-      &__lovely-lilly { @include handleButton($lovely-lilly) };
-      &__aqua-spray { @include handleButton($aqua-spray) };
-      &__mello-yellow { @include handleButton($mello-yellow) };
-      &__dusty-cactus { @include handleButton($dusty-cactus) };
-    }
+    // GRADIENTS
+    &.vital-ocean { @include handleButton($vital-ocean) };
+    &.kale-salad { @include handleButton($kale-salad) };
+    &.disco-club { @include handleButton($disco-club) };
+    &.shady-lane { @include handleButton($shady-lane) };
+    &.retro-wagon { @include handleButton($retro-wagon) };
+    &.fresco-crush { @include handleButton($fresco-crush) };
+    &.cucumber-water { @include handleButton($cucumber-water) };
+    &.sea-salt { @include handleButton($sea-salt) };
+    &.par-four { @include handleButton($par-four) };
+    &.ooey-gooey { @include handleButton($ooey-gooey) };
+    &.bloody-mimosa { @include handleButton($bloody-mimosa) };
+    &.lovely-lilly { @include handleButton($lovely-lilly) };
+    &.aqua-spray { @include handleButton($aqua-spray) };
+    &.mello-yellow { @include handleButton($mello-yellow) };
+    &.dusty-cactus { @include handleButton($dusty-cactus) };
 
-    &.color {
-      // COLORS
-      // Primary Color Palette
-      &__green { @include handleButton($green)}
-      &__red { @include handleButton($red)}
-      &__orange { @include handleButton($orange)}
-      &__yellow { @include handleButton($yellow)}
-      &__blue { @include handleButton($blue)}
-      &__purple { @include handleButton($purple)}
-      &__pink { @include handleButton($lightPink)}
 
-      // Grey Color Palette
-      &__smoke { @include handleButton($smoke) }
-      &__darkSmoke { @include handleButton($darkSmoke) }
-      &__snow { @include handleButton($snow) }
-      &__darkSnow { @include handleButton($darkSnow) }
-      &__steel { @include handleButton($steel); color: $snow; }
-      &__slate { @include handleButton($slate); color: $snow; }  
-      &__silver { @include handleButton($silver) }  
-    }
+    // COLORS
+    // Primary Color Palette
+    &.green { @include handleButton($green)}
+    &.red { @include handleButton($red)}
+    &.orange { @include handleButton($orange)}
+    &.yellow { @include handleButton($yellow)}
+    &.blue { @include handleButton($blue)}
+    &.purple { @include handleButton($purple)}
+    &.pink { @include handleButton($lightPink)}
+
+    // Grey Color Palette
+    &.smoke { @include handleButton($smoke) }
+    &.darkSmoke { @include handleButton($darkSmoke) }
+    &.snow { @include handleButton($snow) }
+    &.darkSnow { @include handleButton($darkSnow) }
+    &.steel { @include handleButton($steel); color: $snow; }
+    &.slate { @include handleButton($slate); color: $snow; }  
+    &.silver { @include handleButton($silver) }  
 
     &.round,
     &.round::after {
@@ -170,5 +166,4 @@
       min-width: 80px;
       width: 100%;
     }
-  }
 }

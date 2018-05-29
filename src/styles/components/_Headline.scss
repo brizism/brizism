@@ -2,87 +2,82 @@
 @import '../settings/mixins';
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700,900');
 
-.br {
-  &__headline {
-    display: inline-block;
-    position: relative;
-    color: $black;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-    letter-spacing: -2px;
-  
-    &:after {
-      @include handleHeadline($kale-salad);
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: -10px;
-      width: 100%;
-      height: 50%;
-      padding: 0px 10px;
-      z-index: -1;
-      box-sizing: content-box;
-    }
-  
-    &.gradient {
-      // GRADIENTS
-      &__vital-ocean { @include handleHeadline($vital-ocean) };
-      &__kale-salad { @include handleHeadline($kale-salad) };
-      &__disco-club { @include handleHeadline($disco-club) };
-      &__shady-lane { @include handleHeadline($shady-lane) };
-      &__retro-wagon { @include handleHeadline($retro-wagon) };
-      &__fresco-crush { @include handleHeadline($fresco-crush) };
-      &__cucumber-water { @include handleHeadline($cucumber-water) };
-      &__sea-salt { @include handleHeadline($sea-salt) };
-      &__par-four { @include handleHeadline($par-four) };
-      &__ooey-gooey { @include handleHeadline($ooey-gooey) };
-      &__bloody-mimosa { @include handleHeadline($bloody-mimosa) };
-      &__lovely-lilly { @include handleHeadline($lovely-lilly) };
-      &__aqua-spray { @include handleHeadline($aqua-spray) };
-      &__mello-yellow { @include handleHeadline($mello-yellow) };
-      &__dusty-cactus { @include handleHeadline($dusty-cactus) };
-    }
-  
-    &.color {
-      // COLORS
-      // Primary Color Palette
-      &__green { @include handleHeadline($green)}
-      &__red { @include handleHeadline($red)}
-      &__orange { @include handleHeadline($orange)}
-      &__yellow { @include handleHeadline($yellow)}
-      &__blue { @include handleHeadline($blue)}
-      &__purple { @include handleHeadline($purple)}
-      &__pink { @include handleHeadline($lightPink)}
-  
-      // Grey Color Palette
-      &__smoke { @include handleHeadline($smoke) }
-      &__darkSmoke { @include handleHeadline($darkSmoke) }
-      &__snow { @include handleHeadline($snow) }
-      &__darkSnow { @include handleHeadline($darkSnow) }
-      &__steel { @include handleHeadline($steel); color: $snow; }
-      &__slate { @include handleHeadline($slate); color: $snow; }  
-      &__silver { @include handleHeadline($silver) }  
-    }
+.#{$brizism-namespace}headline {
+  display: inline-block;
+  position: relative;
+  color: $black;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  letter-spacing: -2px;
+
+  &:after {
+    @include handleHeadline($kale-salad);
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -10px;
+    width: 100%;
+    height: 50%;
+    padding: 0px 10px;
+    z-index: -1;
+    box-sizing: content-box;
   }
+
+  // GRADIENTS
+  &.vital-ocean { @include handleButton($vital-ocean) };
+  &.kale-salad { @include handleButton($kale-salad) };
+  &.disco-club { @include handleButton($disco-club) };
+  &.shady-lane { @include handleButton($shady-lane) };
+  &.retro-wagon { @include handleButton($retro-wagon) };
+  &.fresco-crush { @include handleButton($fresco-crush) };
+  &.cucumber-water { @include handleButton($cucumber-water) };
+  &.sea-salt { @include handleButton($sea-salt) };
+  &.par-four { @include handleButton($par-four) };
+  &.ooey-gooey { @include handleButton($ooey-gooey) };
+  &.bloody-mimosa { @include handleButton($bloody-mimosa) };
+  &.lovely-lilly { @include handleButton($lovely-lilly) };
+  &.aqua-spray { @include handleButton($aqua-spray) };
+  &.mello-yellow { @include handleButton($mello-yellow) };
+  &.dusty-cactus { @include handleButton($dusty-cactus) };
+
+
+  // COLORS
+  // Primary Color Palette
+  &.green { @include handleButton($green)}
+  &.red { @include handleButton($red)}
+  &.orange { @include handleButton($orange)}
+  &.yellow { @include handleButton($yellow)}
+  &.blue { @include handleButton($blue)}
+  &.purple { @include handleButton($purple)}
+  &.pink { @include handleButton($lightPink)}
+
+  // Grey Color Palette
+  &.smoke { @include handleButton($smoke) }
+  &.darkSmoke { @include handleButton($darkSmoke) }
+  &.snow { @include handleButton($snow) }
+  &.darkSnow { @include handleButton($darkSnow) }
+  &.steel { @include handleButton($steel); color: $snow; }
+  &.slate { @include handleButton($slate); color: $snow; }  
+  &.silver { @include handleButton($silver) }  
 }
 
-h1.br__headline {
+h1.#{$brizism-namespace}headline {
   font-size: 6.667rem;
 }
 
-h2.br__headline {
+h2.#{$brizism-namespace}headline {
   font-size: 2.74286rem;
 }
 
-h3.br__headline {
+h3.#{$brizism-namespace}headline {
   font-size: 2.5714rem;
 }
 
-h4.br__headline {
+h4.#{$brizism-namespace}headline {
   font-size: 1.71429rem;
 }
 
-h5.br__headline {
+h5.#{$brizism-namespace}headline {
   font-size: 1.6rem;
 }
 
